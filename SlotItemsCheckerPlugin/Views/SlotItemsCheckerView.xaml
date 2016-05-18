@@ -45,27 +45,35 @@
 	<Grid Margin="0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
-		
-		<StackPanel Grid.Row="0"
-					Margin="5,0">
-			<TextBlock Text="※KanColleViewer 起動直後の状態が表示されます。"
-					Margin="0,0,0,3"/>
-			<TextBlock Text="※試製51cm連装砲や15m二重測距儀+21号電探改二など slot_item と unsetslot での装備種別が異なる装備があるため、全体の装備数合計は一致するが各種別では一致しないケースが発生します。"
-					Margin="0,0,0,10"/>
+		<Expander Header="説明"
+				  IsExpanded="True">
+			<StackPanel Grid.Row="0"
+						Margin="5,0">
+				<TextBlock Text="※KanColleViewer 起動直後の表示にしか対応していません。"
+						Margin="0,0,0,3"/>
+				<TextBlock Text="※試製51cm連装砲や15m二重測距儀+21号電探改二など slot_item と unsetslot での装備種別が異なる装備があるため、全体の装備数合計は一致するが各種別では一致しないケースが発生します。"
+						Margin="0,0,0,3"/>
+				<TextBlock Text="※基地航空隊に配備している装備は slot_item には含まれますが unsetslot には含まれない点に注意が必要です。"
+						Margin="0,0,0,10"/>
 
-			<TextBlock Text="総数: require_info の api_slot_item の総数"
-					Margin="0,0,0,3"/>
-			<TextBlock Text="装備数: port の api_ship の api_onslot で装備している数"
-					Margin="0,0,0,3"/>
-			<TextBlock Text="余り: require_info の api_unsetslot の数"
-					Margin="0,0,0,3"/>
+				<TextBlock Text="総数: require_info の api_slot_item の総数"
+						Margin="0,0,0,3"/>
+				<TextBlock Text="装備数: port の api_ship の api_onslot で装備している数"
+						Margin="0,0,0,3"/>
+				<TextBlock Text="余り: require_info の api_unsetslot の数"
+						Margin="0,0,0,3"/>
+			</StackPanel>
+		</Expander>
+
+		<StackPanel Grid.Row="1"
+					Margin="5,0">
 
 			<Rectangle Style="{DynamicResource SeparatorRectangleStyleKey}"
-					   Height=".99"
-					   Margin="0,10"/>
-
+						   Height=".99"
+						   Margin="0,5"/>
 			<TextBlock Margin="0,0,0,3">
 				<Run Text="slot_item ベースの装備数合計:"/>
 				<Run Text="{Binding SlotItemsTotalCount, Mode=OneWay}"
@@ -84,7 +92,7 @@
 				  ScrollViewer.VerticalScrollBarVisibility="Auto"
 				  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
 				  Margin="0,10,0,0"
-				  Grid.Row="1">
+				  Grid.Row="2">
 			<ListView.View>
 				<GridView>
 					<GridViewColumn Header="装備種別"
