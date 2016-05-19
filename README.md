@@ -87,3 +87,18 @@ slot_item から算出した装備数と、unsetslot から算出した装備数
 
 * **ライセンス :** Apache License Version 2.0
 * **ライセンス全文 :** [licenses/Apache.txt](licenses/Apache.txt)
+
+#### [Json.NET](http://www.newtonsoft.com/json)
+
+> The MIT License (MIT)
+> 
+> Copyright (c) 2007 James Newton-King
+
+* **ライセンス :** The MIT License (MIT)
+* **ライセンス全文 :** [licenses/Json.NET.txt](licenses/Json.NET.txt)
+
+### LATEST BUILD
+
+* [![Build status](https://ci.appveyor.com/api/projects/status/1iv17ibxph7ocqmq?svg=true)](https://ci.appveyor.com/project/veigr/slotitemscheckerplugin/build/artifacts) [SlotItemsCheckerPlugin - AppVeyor](https://ci.appveyor.com/project/veigr/slotitemscheckerplugin/build/artifacts)
+* 「ブロックの解除」を忘れないように。
+    * [https://twitter.com/Grabacr07/status/497403215730589696](https://twitter.com/Grabacr07/status/497403215730589696)
